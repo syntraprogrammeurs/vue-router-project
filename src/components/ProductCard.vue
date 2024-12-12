@@ -1,13 +1,16 @@
 <template>
-  <div class="card">
-    <img src="https://via.placeholder.com/200" alt="product afbeelding" class="card-img-top">
-    <div class="card-body">
-      <div class="card-title">
-        <h3>{{ name }}</h3>
-        <p class="card-text">{{ price }}</p>
-        <button @click="addToCart" class="btn btn-primary">
-          <i class="bi bi-plus"></i>
-        </button>
+  <div class="col-lg-4">
+    <div class="card">
+      <img src="https://via.placeholder.com/200" alt="product afbeelding" class="card-img-top">
+      <div class="card-body">
+        <div class="card-title">
+          <h3>{{ name }}</h3>
+          <p class="card-text">{{ price }}</p>
+          <p>{{ color }}</p>
+          <button @click="addToCart" class="btn btn-primary">
+            <i class="bi bi-plus"></i>
+          </button>
+        </div>
       </div>
     </div>
   </div>
@@ -29,6 +32,10 @@ import {computed} from "vue";
         type:String,
         required:true,
       },
+      color:{
+        type:String,
+        required:true,
+      }
     },
     emits:['addToCart'],
     setup(props,{emit}){
