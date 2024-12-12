@@ -21,10 +21,11 @@ export default{
   name:'ShopComponent',
   components: {ProductCard},
   setup(){
+    const randomImageUrl = `https://picsum.photos/200`;
     const products = ref([
-      { id: 1, name: 'Laptop', price: 999.99, image: 'https://via.placeholder.com/200', color:'blue' },
-      { id: 2, name: 'Telefoon', price: 499.99, image: 'https://via.placeholder.com/200', color:'red'},
-      { id: 3, name: 'Desktop', price: 699.99, image: 'https://via.placeholder.com/200', color:'orange', },
+      { id: 1, name: 'Laptop', price: 999.99, image: randomImageUrl, color:'blue' },
+      { id: 2, name: 'Telefoon', price: 499.99, image: randomImageUrl, color:'red'},
+      { id: 3, name: 'Desktop', price: 699.99, image: randomImageUrl, color:'orange', },
     ]);
     const cart = ref([]);
 

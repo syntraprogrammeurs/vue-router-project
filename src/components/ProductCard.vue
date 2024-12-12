@@ -1,12 +1,13 @@
 <template>
   <div class="col-lg-4">
     <div class="card">
-      <img src="https://via.placeholder.com/200" alt="product afbeelding" class="card-img-top">
+      <img :src="image" alt="product afbeelding" class="card-img-top">
       <div class="card-body">
         <div class="card-title">
           <h3>{{ name }}</h3>
           <p class="card-text">{{ price }}</p>
-          <p>{{ color }}</p>
+          <span style="display: inline-block; width: 20px; height: 20px; margin-right: 8px; border: 1px solid #000;"
+                :style="{ backgroundColor: color }"></span>
           <button @click="addToCart" class="btn btn-primary">
             <i class="bi bi-plus"></i>
           </button>
