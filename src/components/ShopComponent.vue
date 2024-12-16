@@ -1,6 +1,7 @@
 <template>
   <div class="row">
 <!--    hier komen meerdere productcards-->
+
     <h1>Shop</h1>
       <product-card
           v-for="product in products"
